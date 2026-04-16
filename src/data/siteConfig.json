@@ -1,0 +1,53 @@
+{
+  "name": "RIOSMARIANA",
+  "slug": "riosmariana.com.br",
+  "description": "Acho que a paixão por viagens, carreiras, crescimento profissional e moda foram os responsáveis pela ideia. Por gostar muito, e estar trabalhando diariamente nesses aspectos, surgiu a ideia postar conteúdos com dicas detalhadas e informações. Quando estou escrevendo, imagino todas as pessoas lendo e tendo conhecimentos que agreguem nas suas vidas, então tento ser o mais clara possível, dando boas dicas. Obrigado desde já 🙂",
+  "url": "https://riosmariana.com.br",
+  "niche": "Viagens e Turismo",
+  "keywords": "Acho que a paixao por viagens carreiras crescimento profissional e moda foram",
+  "email": "contato@riosmariana.com.br",
+  "palette": "rose",
+  "colors": {
+    "primary": "#e11d48",
+    "accent": "#9f1239",
+    "dark": "#4c0519"
+  },
+  "headerContrast": "light",
+  "font": "playfair",
+  "fontFamily": "'Playfair Display', serif",
+  "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap",
+  "components": {
+    "header": "Header-J",
+    "hero": "Hero-C",
+    "features": "Features-H",
+    "about": "About-B",
+    "posts": "Posts-A",
+    "footer": "Footer-G",
+    "sobre": "Sobre-C",
+    "contato": "Contato-E"
+  },
+  "menu": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Sobre",
+      "href": "/sobre"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "twitter": "",
+    "youtube": ""
+  }
+}

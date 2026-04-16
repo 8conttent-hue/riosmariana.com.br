@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Sobre Nós",
+    "description": "Conheça o RIOSMARIANA"
+  },
+  "hero": {
+    "title": "Sobre Nós",
+    "subtitle": "A RIOSMARIANA nasceu da paixão por viagens, crescimento profissional e moda. Aqui, você encontrará conteúdos que aliam essas paixões, trazendo informações valiosas e dicas práticas para enriquecer sua vida."
+  },
+  "content": "Acreditamos que o conhecimento transforma vidas. Por isso, nosso objetivo é compartilhar experiências e informações que fazem a diferença no dia a dia de nossos leitores. Queremos ser a sua fonte confiável para tudo relacionado a viagens, carreira e estilo.",
+  "mission": "Inspirar e informar pessoas a explorarem o mundo e a se desenvolverem pessoal e profissionalmente.",
+  "image": "/images/sobre.jpg",
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Artigos"
+    },
+    {
+      "value": "100k+",
+      "label": "Leitores"
+    },
+    {
+      "value": "5",
+      "label": "Redatores"
+    }
+  ],
+  "team": []
+}

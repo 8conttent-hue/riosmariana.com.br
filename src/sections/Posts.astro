@@ -1,0 +1,61 @@
+---
+// Posts-A: Grid 3 colunas
+import { getAllPosts } from '../lib/posts';
+interface Props { title: string; limit: number; btnText: string; btnLink: string; }
+const { title, limit, btnText, btnLink } = Astro.props;
+
+const posts = (await getAllPosts()).slice(0, limit);
+---
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="flex items-end justify-between mb-12">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Blog</span>
+        <h2 class="text-3xl md:text-4xl font-black text-dark">{title}</h2>
+      </div>
+      <a href={btnLink} class="hidden md:flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all">
+        {btnText} →
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-3 gap-6">
+      {posts.map(post => (
+        <article class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all">
+          <!-- Imagem -->
+          <div class="aspect-video bg-gradient-to-br from-primary/10 to-accent/5 overflow-hidden">
+            {post.heroImage && (
+              <img
+                src={post.heroImage}
+                alt={post.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            )}
+          </div>
+          <!-- Conteúdo -->
+          <div class="p-5">
+            <div class="text-xs font-bold text-primary uppercase tracking-widest mb-2">
+              {post.category || 'Blog'}
+            </div>
+            <h3 class="font-bold text-dark leading-snug mb-3 group-hover:text-primary transition-colors line-clamp-2">
+              <a href={`/${post.slug}`}>{post.title}</a>
+            </h3>
+            <p class="text-sm text-gray-500 line-clamp-2 mb-4">{post.description}</p>
+            <div class="text-xs text-gray-400">
+              {new Date(post.pubDate).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- CTA mobile -->
+    <div class="text-center mt-8 md:hidden">
+      <a href={btnLink} class="inline-flex items-center gap-2 text-sm font-bold text-primary">
+        {btnText} →
+      </a>
+    </div>
+  </div>
+</section>

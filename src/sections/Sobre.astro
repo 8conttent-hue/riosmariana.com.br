@@ -1,0 +1,57 @@
+---
+// Sobre-C: Story Minimalista — editorial com citação em destaque e cards de valores
+interface Props {
+  title: string;
+  subtitle: string;
+  content: string;
+  mission?: string;
+  image?: string;
+}
+const { title, subtitle, content, mission, image } = Astro.props;
+---
+<!-- Header minimal -->
+<section class="relative pt-20 pb-12 border-b border-gray-200 overflow-hidden" style={image ? `background: url(${image}) center/cover no-repeat` : ''}>
+  <div class={`absolute inset-0 ${image ? 'bg-white/88' : 'bg-gray-50'}`}></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Nossa História</span>
+    <h1 class="text-5xl md:text-6xl font-black text-dark leading-none mb-6">{title}</h1>
+    <div class="w-16 h-1 bg-primary mx-auto"></div>
+  </div>
+</section>
+
+<!-- Conteúdo editorial -->
+<section class="py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-4">
+    <p class="text-xl text-gray-500 leading-relaxed mb-10">{subtitle}</p>
+
+    {mission && (
+      <div class="my-12 text-center">
+        <div class="text-6xl text-primary/20 font-black leading-none mb-2">"</div>
+        <p class="text-2xl font-bold text-dark leading-snug italic">{mission}</p>
+        <div class="w-12 h-0.5 bg-primary mx-auto mt-6"></div>
+      </div>
+    )}
+
+    <p class="text-gray-600 leading-relaxed text-lg">{content}</p>
+  </div>
+</section>
+
+<!-- Cards de valores -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 text-center mb-12">O Que Nos Move</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      {[
+        { title: 'Propósito', icon: '🌱', desc: 'Acreditamos que informação de qualidade transforma vidas e comunidades.' },
+        { title: 'Paixão', icon: '❤️', desc: 'Cada artigo é escrito com dedicação genuína ao nosso público.' },
+        { title: 'Impacto', icon: '⚡', desc: 'Medimos nosso sucesso pelo valor que geramos para nossos leitores.' },
+      ]?.map(c => (
+        <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:border-primary/20 hover:shadow-lg transition-all">
+          <div class="text-4xl mb-6">{c.icon}</div>
+          <h3 class="text-lg font-black text-dark mb-3">{c.title}</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">{c.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

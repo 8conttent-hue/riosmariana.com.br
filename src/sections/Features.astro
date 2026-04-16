@@ -1,0 +1,41 @@
+---
+// Features-H: Step-by-Step Timeline - Design de jornada ou processo
+interface Item { icon: string; title: string; desc: string; }
+interface Props { title: string; items: Item[]; }
+const { title, items } = Astro.props;
+---
+<section class="py-24 bg-dark text-white overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-24 relative">
+       <span class="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Processo de Cuidado</span>
+       <h2 class="text-4xl md:text-6xl font-black tracking-tighter relative z-10">{title}</h2>
+       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl font-black text-white/5 whitespace-nowrap -z-0">WORKFLOW</div>
+    </div>
+
+    <div class="relative">
+      <!-- Desktop Connecting Line -->
+      <div class="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-white/10 to-transparent z-0"></div>
+
+      <div class="grid lg:grid-cols-3 gap-12 relative z-10">
+        {items.map((item, i) => (
+          <div class="relative pt-12 lg:pt-0 group">
+            <!-- Number Badge -->
+            <div class="absolute top-0 lg:-top-16 left-0 lg:left-1/2 lg:-translate-x-1/2 flex flex-col items-center">
+               <div class="text-xs font-black text-primary mb-2 opacity-0 group-hover:opacity-100 transition-opacity">ETAPA 0{i+1}</div>
+               <div class="w-12 h-12 rounded-full bg-dark border-4 border-white/5 flex items-center justify-center text-xl group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-2xl">
+                  {item.icon}
+               </div>
+            </div>
+
+            <div class="lg:text-center mt-6 lg:mt-12">
+              <h3 class="text-xl font-black mb-4 tracking-tight group-hover:text-primary transition-colors">{item.title}</h3>
+              <p class="text-sm text-white/40 leading-relaxed font-medium px-4">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

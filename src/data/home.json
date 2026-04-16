@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "RIOSMARIANA — Descubra o Mundo com RIOSMARIANA",
+    "description": "Dicas de Viagens, Carreira e Estilo de Vida"
+  },
+  "hero": {
+    "title": "Descubra o Mundo com RIOSMARIANA",
+    "subtitle": "Dicas de Viagens, Carreira e Estilo de Vida",
+    "btnText": "Explore Agora",
+    "bgImage": "/images/hero.jpg",
+    "btnLink": "/blog"
+  },
+  "features": {
+    "title": "O que oferecemos?",
+    "items": [
+      {
+        "icon": "✈️",
+        "title": "Dicas de Viagens",
+        "desc": "Encontre as melhores dicas e roteiros para suas aventuras."
+      },
+      {
+        "icon": "📈",
+        "title": "Crescimento Profissional",
+        "desc": "Insights e orientações para impulsionar sua carreira."
+      },
+      {
+        "icon": "👗",
+        "title": "Moda e Estilo",
+        "desc": "Tendências e dicas de moda para viajar com estilo."
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre RIOSMARIANA",
+    "desc": "A RIOSMARIANA nasceu da paixão por viagens, crescimento profissional e moda. Aqui, você encontrará conteúdos que aliam essas paixões, trazendo informações valiosas e dicas práticas para enriquecer sua vida.",
+    "stats": [
+      {
+        "value": "100+",
+        "label": "Dicas de Viagens Publicadas"
+      },
+      {
+        "value": "50+",
+        "label": "Artigos sobre Carreira"
+      },
+      {
+        "value": "30+",
+        "label": "Sugestões de Moda"
+      }
+    ],
+    "image": "/images/about.jpg",
+    "btnText": "Saiba Mais",
+    "btnLink": "/sobre"
+  },
+  "posts": {
+    "title": "Últimos Artigos",
+    "limit": 3,
+    "btnText": "Ver Blog",
+    "btnLink": "/blog"
+  }
+}
